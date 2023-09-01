@@ -1,0 +1,29 @@
+.mainButton {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  padding: 1.25rem 1.5rem;
+  transition: background-color 0.1s linear;
+  cursor: pointer;
+}
+
+.whiteBtn {
+  border: 1px solid #fffef2;
+  &:hover {
+    background-color: #fffef2;
+    color: #333;
+  }
+}
+
+.blackBtn {
+  border: 1px solid #c6c6c6;
+  color: #333;
+
+  &:hover {
+    background-color: #333;
+    color: #fffef2;
+  }
+}

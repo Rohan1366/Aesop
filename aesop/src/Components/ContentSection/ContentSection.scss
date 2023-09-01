@@ -1,0 +1,65 @@
+.contentSection {
+  padding: 9.375rem 0 0 5rem;
+  display: flex;
+  gap: 4.5rem;
+
+  .contentTextDiv {
+    width: 35%;
+    color: #333;
+
+    .contentSubHeader {
+      margin-bottom: 1.25rem;
+      font-size: 0.875rem;
+      line-height: 1.7;
+    }
+    .contentHeader {
+      font-size: 1.875rem;
+      margin-bottom: 1.875rem;
+      font-family: "Nunito Sans", sans-serif;
+      line-height: 1.33;
+      font-weight: 400;
+    }
+    .contentPara {
+      line-height: 1.7;
+      margin-bottom: 1.875rem;
+    }
+    .contentBtnDiv {
+      width: 85%;
+    }
+  }
+  .contentImg {
+    width: 65%;
+  }
+}
+.resverSection {
+  flex-direction: row-reverse;
+  padding: 9.375rem 5rem 0 0;
+}
+
+@media (max-width: 600px) {
+  .contentSection {
+    padding: 5rem 1.25rem 0 1.25rem;
+    flex-direction: column;
+    gap: 1.875rem;
+
+    .contentTextDiv {
+      width: 100%;
+      .contentSubHeader {
+        margin-bottom: 0.5rem;
+      }
+      .contentHeader {
+        font-size: 1.5625rem;
+      }
+
+      .contentBtnDiv {
+        width: 100%;
+      }
+    }
+    .contentImg {
+      width: 100%;
+    }
+  }
+  .resverSection {
+    flex-direction: column-reverse;
+  }
+}

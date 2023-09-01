@@ -1,0 +1,24 @@
+.promotionalNavDiv {
+  padding: 0.75rem 1.25rem 0.5rem;
+  background-color: #252525;
+  text-align: center;
+  .promotionalNavText {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #fffef2;
+    padding-bottom: 0.05rem;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.5s linear;
+    &:hover {
+      border-color: #fffef2;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .promotionalNavText {
+    text-align: left;
+  }
+}

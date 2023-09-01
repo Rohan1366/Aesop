@@ -1,0 +1,14 @@
+.footerLink {
+  font-size: 0.875rem;
+  color: #fffef2;
+  line-height: 2.5;
+  cursor: pointer;
+  .footLinkArrow {
+    vertical-align: middle;
+  }
+}
+@media (max-width: 600px) {
+  .footerLink {
+    font-size: 0.75rem;
+  }
+}

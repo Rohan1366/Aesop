@@ -1,0 +1,161 @@
+.sliderSection {
+  padding-top: 9.375rem;
+  padding-bottom: 2.5rem;
+  .desktopSlider {
+    display: block;
+  }
+  .mobileSlider {
+    display: none;
+  }
+  .slider {
+    padding: 0 5rem;
+    margin-bottom: 2.5rem;
+    height: 28.875rem;
+    overflow: hidden;
+    position: relative;
+    // display: flex;
+    // overflow: auto;
+    .sliderBtn {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      width: 5rem;
+      height: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #333;
+      cursor: pointer;
+      transform: translate(0, -50%);
+      transition: transform 0.2s linear;
+
+      img {
+        width: 1rem;
+      }
+    }
+
+    .leftSlideBtn {
+      transform: translate(-100%, -50%);
+      left: 0;
+    }
+    .rightSlideBtn {
+      transform: translate(100%, -50%);
+      right: 0;
+    }
+    .slide {
+      //   flex: 0 0 33%;
+      position: absolute;
+      width: 30%;
+      height: 100%;
+      transition: transform 0.3s linear;
+    }
+
+    .productSlide {
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      .productImg {
+        width: 80%;
+        margin-inline: auto;
+        margin-top: auto;
+      }
+
+      .productName {
+        margin: 0.625rem 0;
+        font-size: 0.875rem;
+        font-weight: 700;
+      }
+      .productPara {
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  .sliderDetection {
+    margin: 0 5rem;
+    height: 2px;
+    margin-bottom: 2.5rem;
+    display: flex;
+    background-color: #d4d4d4;
+    .line {
+      background-color: #d4d4d4;
+      height: 100%;
+      transition: background-color 0.5s linear;
+    }
+    .active {
+      background-color: #333;
+    }
+  }
+  &:hover .leftSlideBtn,
+  &:hover .rightSlideBtn {
+    transform: translate(0, -50%);
+  }
+}
+
+.textSlider {
+  color: #333;
+  .textSubHeader {
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+  }
+  .textHeader {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 1.875rem;
+    font-weight: 400;
+    line-height: 1.33;
+    margin-bottom: 1.25rem;
+  }
+  .textPara {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 1.875rem;
+  }
+  .textBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .sliderSection {
+    padding-top: 5rem;
+    padding-bottom: 0;
+    .desktopSlider {
+      display: none;
+    }
+    .mobileSlider {
+      display: block;
+    }
+    .slider {
+      padding: 0;
+      .productSlide {
+        width: 100%;
+      }
+      .sliderBtn {
+        width: 3.75rem;
+        height: 3.75rem;
+      }
+
+      .leftSlideBtn,
+      .rightSlideBtn {
+        transform: translate(0, -50%);
+      }
+    }
+    .sliderDetection {
+      margin: 0 1.25rem;
+    }
+  }
+
+  .textSlider {
+    padding: 0 1.25rem;
+
+    .textHeader {
+      font-size: 1.25rem;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+.heroSection {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  // background: url("./../../img/heroImg.svg");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: 83%;
+  .heroImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    object-position: 83%;
+  }
+  .heroContentDiv {
+    position: absolute;
+    display: flex;
+    gap: 3rem;
+    top: 11.25rem;
+    left: 2.5rem;
+    .heroLogo {
+      align-self: flex-start;
+      width: 7.5rem;
+    }
+    .heroTextDiv {
+      width: 27%;
+      color: #fffef2;
+      .hereSubHeader {
+        font-weight: 500;
+        margin-bottom: 0.938rem;
+        font-size: 0.875rem;
+        line-height: 1.7;
+      }
+      .heroHeader {
+        line-height: 1.33;
+        font-size: 1.875rem;
+        font-weight: 400;
+        margin-bottom: 0.938rem;
+      }
+      .heroPara {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 1.875rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .heroSection {
+    .heroImg {
+      height: 50%;
+      object-position: 94%;
+    }
+    .heroContentDiv {
+      background-color: #333;
+      position: static;
+      padding: 2.5rem 1.25rem;
+      .heroLogo {
+        display: none;
+      }
+      .heroTextDiv {
+        width: 100%;
+        .hereSubHeader {
+          margin-bottom: 1.25rem;
+        }
+        .heroHeader {
+          font-size: 1.5rem;
+          margin-bottom: 1.25rem;
+        }
+      }
+    }
+  }
+}

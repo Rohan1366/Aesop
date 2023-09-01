@@ -1,0 +1,93 @@
+.mainImgSliderDiv {
+  width: 70%;
+  .imgSlider {
+    margin-bottom: 3.75rem;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 30.875rem;
+    .sliderImgBtn {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      width: 5rem;
+      height: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #333;
+      cursor: pointer;
+      transform: translate(0, -50%);
+      transition: transform 0.2s linear;
+      img {
+        width: 1rem;
+      }
+    }
+    .leftSlideImgBtn {
+      transform: translate(-100%, -50%);
+      left: 0;
+    }
+    .rightSlideImgBtn {
+      transform: translate(100%, -50%);
+      right: 0;
+    }
+    .imgSlide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease-in;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .sliderLine {
+    height: 2px;
+    margin-bottom: 2.5rem;
+    display: flex;
+    background-color: #d4d4d4;
+    .line {
+      background-color: #d4d4d4;
+      height: 100%;
+      transition: background-color 0.5s linear;
+    }
+    .active {
+      background-color: #333;
+    }
+  }
+  .storeName {
+    color: #666;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    transition: opacity 0.2s linear;
+  }
+  &:hover .leftSlideImgBtn,
+  &:hover .rightSlideImgBtn {
+    transform: translate(0, -50%);
+  }
+}
+
+@media (max-width: 600px) {
+  .mainImgSliderDiv {
+    width: 100%;
+    .imgSlider {
+      margin-bottom: 1.5rem;
+      width: 100%;
+      height: 24.625rem;
+      .sliderImgBtn {
+        width: 3.75rem;
+        height: 3.75rem;
+      }
+      .leftSlideImgBtn,
+      .rightSlideImgBtn {
+        transform: translate(0%, -50%);
+      }
+    }
+    .sliderLine {
+      height: 1.5px;
+      margin-bottom: 1.25rem;
+    }
+  }
+}
